@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page Not Found — Aurelia</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+<main>
+  <div class="success-wrap">
+    <span class="eyebrow">404</span>
+    <h1>This page doesn't exist</h1>
+    <p>The link you followed may be broken, or the page may have moved.</p>
+    <a href="/index.html" class="btn btn-primary">Back to Home</a>
+  </div>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="/js/common.js"></script>
+<script>
+(async function(){ await loadSettings(); renderHeader(''); renderFooter(); })();
+</script>
+</body>
+</html>

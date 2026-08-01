@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Order Confirmed — Aurelia</title>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+<div class="offer-banner" id="offer-banner"></div>
+
+<main>
+  <div class="success-wrap">
+    <div class="success-check">
+      <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <circle class="tick-path" cx="30" cy="30" r="26"/>
+        <path class="tick-mark" d="M18 31l8 8 16-18"/>
+      </svg>
+    </div>
+    <span class="eyebrow">Order <span id="order-id"></span></span>
+    <h1>Your Order Has Been Confirmed Successfully!</h1>
+    <p>Thank you for shopping with Aurelia — we're already getting your order ready to ship. A confirmation has been sent to our fulfilment team.</p>
+
+    <div class="order-details-card" id="order-details"></div>
+
+    <div style="margin-top:36px;">
+      <a href="/products.html" class="btn btn-primary">Continue Shopping</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="/js/common.js"></script>
+<script src="/js/success.js"></script>
+</body>
+</html>

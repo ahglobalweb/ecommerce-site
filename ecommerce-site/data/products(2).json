@@ -1,0 +1,98 @@
+[
+  {
+    "id": "p1",
+    "name": "Aurelia Linen Weekender Bag",
+    "shortDescription": "Hand-finished linen and leather bag for effortless travel.",
+    "description": "Woven from heavyweight Belgian linen and trimmed in full-grain leather, the Weekender is built for a two-day escape or a daily commute. A reinforced base panel and brass hardware mean it will only look better with age.",
+    "price": 4899,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80",
+    "featured": true,
+    "enabled": true,
+    "category": "Bags",
+    "stock": 24
+  },
+  {
+    "id": "p2",
+    "name": "Ember Ceramic Pour-Over Set",
+    "shortDescription": "Matte stoneware carafe and filter cone for slow mornings.",
+    "description": "Thrown in small batches, the Ember set pairs a double-walled stoneware carafe with a precision filter cone that keeps water temperature stable for an even extraction. Dishwasher safe, but it deserves better.",
+    "price": 2599,
+    "image": "https://images.unsplash.com/photo-1517705008128-361805f42e86?w=800&q=80",
+    "featured": true,
+    "enabled": true,
+    "category": "Home",
+    "stock": 40
+  },
+  {
+    "id": "p3",
+    "name": "Solstice Merino Wrap Coat",
+    "shortDescription": "Double-faced merino wool coat with horn buttons.",
+    "description": "Cut from double-faced merino wool milled in Italy, the Solstice coat wraps and ties at the waist for a silhouette that works over everything from tailoring to weekend denim. Fully lined in cupro.",
+    "price": 15999,
+    "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
+    "featured": true,
+    "enabled": true,
+    "category": "Apparel",
+    "stock": 12
+  },
+  {
+    "id": "p4",
+    "name": "Lumen Brass Desk Lamp",
+    "shortDescription": "Adjustable brass task lamp with a warm dimmable LED.",
+    "description": "A solid brass arm and a hand-spun shade house a dimmable LED module rated for 30,000 hours. The Lumen lamp is weighted at the base so it stays put through every late-night deadline.",
+    "price": 8499,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80",
+    "featured": true,
+    "enabled": true,
+    "category": "Home",
+    "stock": 18
+  },
+  {
+    "id": "p5",
+    "name": "Marchetti Leather Card Holder",
+    "shortDescription": "Slim vegetable-tanned leather card case.",
+    "description": "Six card slots and a centre pocket for folded notes, cut from a single piece of vegetable-tanned Tuscan leather that develops a rich patina with use.",
+    "price": 1899,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=800&q=80",
+    "featured": false,
+    "enabled": true,
+    "category": "Accessories",
+    "stock": 60
+  },
+  {
+    "id": "p6",
+    "name": "Haven Wool Throw Blanket",
+    "shortDescription": "Oversized lambswool throw, woven in a herringbone weave.",
+    "description": "Woven on century-old looms from 100% lambswool, the Haven throw is generously sized at 130 x 180cm so it drapes over the largest of sofas without pulling short at the ends.",
+    "price": 6299,
+    "image": "https://images.unsplash.com/photo-1580301762395-83c8bfb01e5a?w=800&q=80",
+    "featured": false,
+    "enabled": true,
+    "category": "Home",
+    "stock": 30
+  },
+  {
+    "id": "p7",
+    "name": "Aurelia Signature Candle",
+    "shortDescription": "Amber, cedarwood and fig soy-wax candle, 60hr burn.",
+    "description": "Our signature scent, poured by hand into a reusable amber glass vessel. Notes of fig leaf and cedarwood open into a warm amber base with an approximate 60-hour burn time.",
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1602874801007-bd35c65ef7dc?w=800&q=80",
+    "featured": false,
+    "enabled": true,
+    "category": "Home",
+    "stock": 75
+  },
+  {
+    "id": "p8",
+    "name": "Voss Cashmere Beanie",
+    "shortDescription": "Ribbed 100% cashmere beanie, unisex fit.",
+    "description": "Knit from pure Mongolian cashmere in a classic ribbed pattern, the Voss beanie folds neatly at the brim and holds its shape through a full winter of wear.",
+    "price": 3499,
+    "image": "https://images.unsplash.com/photo-1519925610903-381054cc2a1c?w=800&q=80",
+    "featured": false,
+    "enabled": true,
+    "category": "Apparel",
+    "stock": 45
+  }
+]

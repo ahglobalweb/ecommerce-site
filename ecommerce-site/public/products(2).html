@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop All Products — Aurelia</title>
+<meta name="description" content="Browse the full Aurelia catalogue: bags, home goods and apparel made to last." />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+<div class="offer-banner" id="offer-banner"></div>
+
+<main>
+  <section class="section" style="padding-top:56px;">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Full Catalogue</span>
+          <h2>Shop all products</h2>
+        </div>
+      </div>
+
+      <div class="filters-bar">
+        <div id="category-chips" style="display:flex; gap:10px; flex-wrap:wrap;"></div>
+        <form class="search-form" role="search" onsubmit="return false;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="product-search-input" placeholder="Search this catalogue" aria-label="Search products" />
+        </form>
+      </div>
+
+      <div class="product-grid" id="all-products-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="/js/common.js"></script>
+<script src="/js/products.js"></script>
+</body>
+</html>

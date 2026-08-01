@@ -1,0 +1,28 @@
+# Copy this file to .env and fill in real values before starting the server.
+
+# Port the server runs on
+PORT=3000
+
+# Long random string used to sign admin session cookies
+SESSION_SECRET=change_this_to_a_long_random_string
+
+# The secret slug that reveals the hidden admin login page.
+# Visiting /admin/<this value> is the ONLY way to reach the admin panel.
+# Pick something long and unguessable, then change it again from inside
+# the admin panel once you've logged in the first time.
+ADMIN_SECRET_PATH=aurelia-control-9f3k7q
+
+# Default admin login (the password is hashed on first run; change it
+# immediately from Settings -> Change Password after logging in)
+ADMIN_USERNAME=admin
+ADMIN_DEFAULT_PASSWORD=ChangeMe123!
+
+# Gmail address that will RECEIVE order notification emails.
+# Can also be set/changed later from the admin panel (Settings -> Order Email).
+ORDER_NOTIFICATION_EMAIL=
+
+# Gmail SMTP credentials used to SEND the order emails.
+# Use a Gmail "App Password" (Google Account -> Security -> App Passwords),
+# not your normal Gmail password.
+GMAIL_SENDER_ADDRESS=
+GMAIL_APP_PASSWORD=

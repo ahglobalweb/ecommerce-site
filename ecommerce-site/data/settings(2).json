@@ -1,0 +1,24 @@
+{
+  "siteName": "Aurelia",
+  "heroHeading": "Considered objects for a well-kept life",
+  "heroSubheading": "Small-batch homeware, bags and apparel, made to be used for decades, not seasons.",
+  "offerText": "Midsummer Sale — 20% off orders over ₹5,000",
+  "countdownTarget": "2026-08-15T23:59:59",
+  "colors": {
+    "primary": "#12151c",
+    "accent": "#b8925a",
+    "accentSecondary": "#2f4a3c",
+    "background": "#f7f4ee",
+    "surface": "#ffffff",
+    "text": "#1c1f26"
+  },
+  "aboutDescription": "Aurelia began in 2019 as a two-person workshop making small runs of homeware for friends. Today we work with a handful of family-run ateliers across Europe and South Asia to make considered, long-lasting objects for the home, the wardrobe and the desk. Every product in our catalogue is made to be repaired, not replaced.",
+  "facebookUrl": "https://facebook.com/",
+  "instagramUrl": "https://instagram.com/",
+  "phoneNumber": "+91 98765 43210",
+  "passwordHash": "",
+  "adminUsername": "admin",
+  "orderNotificationEmail": "",
+  "gmailSenderAddress": "",
+  "gmailAppPassword": ""
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout — Aurelia</title>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+<div class="offer-banner" id="offer-banner"></div>
+
+<main>
+  <section class="section" style="padding-top:56px;">
+    <div class="container">
+
+      <div id="checkout-empty" class="empty-state" style="display:none;">
+        <h2>Your checkout is empty</h2>
+        <p>Head back to the shop and choose something to buy.</p>
+        <a href="/products.html" class="btn btn-primary">Shop All Products</a>
+      </div>
+
+      <div id="checkout-content">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">One Step Away</span>
+            <h2>Delivery details</h2>
+          </div>
+        </div>
+
+        <div class="checkout-grid">
+          <div class="form-card">
+            <form id="checkout-form" novalidate>
+              <div class="form-row" data-field="fullName">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" autocomplete="name" required />
+                <div class="error-msg"></div>
+              </div>
+
+              <div class="form-row" data-field="houseName">
+                <label for="houseName">House / Building Name</label>
+                <input type="text" id="houseName" name="houseName" autocomplete="address-line1" required />
+                <div class="error-msg"></div>
+              </div>
+
+              <div class="form-row" data-field="roadName">
+                <label for="roadName">Road Name</label>
+                <input type="text" id="roadName" name="roadName" autocomplete="address-line2" required />
+                <div class="error-msg"></div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-row" data-field="city">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" autocomplete="address-level2" required />
+                  <div class="error-msg"></div>
+                </div>
+                <div class="form-row" data-field="state">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" autocomplete="address-level1" required />
+                  <div class="error-msg"></div>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-row" data-field="pinCode">
+                  <label for="pinCode">PIN Code</label>
+                  <input type="text" id="pinCode" name="pinCode" inputmode="numeric" autocomplete="postal-code" required />
+                  <div class="error-msg"></div>
+                </div>
+                <div class="form-row" data-field="phone">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+                  <div class="error-msg"></div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-accent btn-block" style="margin-top:8px;">Confirm Order</button>
+            </form>
+          </div>
+
+          <div class="summary-card">
+            <h4 style="font-size:13px; text-transform:uppercase; letter-spacing:.06em; margin-bottom:16px;">Order Summary</h4>
+            <div id="summary-items"></div>
+            <div class="summary-line"><span>Subtotal</span><span id="summary-subtotal">₹0</span></div>
+            <div class="summary-line"><span>Shipping</span><span id="summary-shipping">Free</span></div>
+            <div class="summary-line total"><span>Total</span><span id="summary-total">₹0</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="/js/common.js"></script>
+<script src="/js/checkout.js"></script>
+</body>
+</html>

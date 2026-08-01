@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow, noarchive" />
+<title>Admin — Aurelia</title>
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/admin-assets/css/admin.css" />
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div class="admin-login-wrap" id="login-screen">
+  <div class="admin-login-card">
+    <h1>Admin Login</h1>
+    <p class="sub">Restricted area. Authorised personnel only.</p>
+    <div id="login-alert"></div>
+    <form id="login-form">
+      <div class="form-row">
+        <label for="login-username">Username</label>
+        <input type="text" id="login-username" autocomplete="username" required />
+      </div>
+      <div class="form-row">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" autocomplete="current-password" required />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Log In</button>
+    </form>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="admin-shell" id="dashboard-screen" style="display:none;">
+  <aside class="admin-sidebar">
+    <h2>Aurelia Admin</h2>
+    <div class="admin-nav-item active" data-panel="panel-products"><button>Products</button></div>
+    <div class="admin-nav-item" data-panel="panel-content"><button>Homepage &amp; Offer</button></div>
+    <div class="admin-nav-item" data-panel="panel-appearance"><button>Appearance</button></div>
+    <div class="admin-nav-item" data-panel="panel-orders"><button>Orders</button></div>
+    <div class="admin-nav-item" data-panel="panel-email"><button>Order Email</button></div>
+    <div class="admin-nav-item" data-panel="panel-security"><button>Security</button></div>
+    <div class="admin-nav-item" style="margin-top:24px; border-top:1px solid rgba(255,255,255,.1); padding-top:18px;">
+      <button id="logout-btn">Log Out</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+
+    <!-- PRODUCTS -->
+    <section class="admin-panel-section active" id="panel-products">
+      <div class="admin-topbar">
+        <h1>Products</h1>
+        <button class="btn btn-accent" id="add-product-btn">+ Add Product</button>
+      </div>
+      <div class="admin-card">
+        <table class="admin-table">
+          <thead>
+            <tr><th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Featured</th><th></th></tr>
+          </thead>
+          <tbody id="products-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- HOMEPAGE / OFFER CONTENT -->
+    <section class="admin-panel-section" id="panel-content">
+      <div class="admin-topbar"><h1>Homepage &amp; Offer</h1></div>
+      <div id="content-alert"></div>
+      <form id="content-form">
+        <div class="admin-card">
+          <h3>Hero Section</h3>
+          <p class="card-sub">Shown at the top of the homepage.</p>
+          <div class="form-row"><label>Site Name</label><input type="text" id="f-siteName" /></div>
+          <div class="form-row"><label>Homepage Heading</label><input type="text" id="f-heroHeading" /></div>
+          <div class="form-row"><label>Homepage Subheading</label><textarea id="f-heroSubheading" rows="2"></textarea></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>Limited-Time Offer</h3>
+          <p class="card-sub">Powers the scrolling banner and the countdown ticket on the homepage.</p>
+          <div class="form-row"><label>Offer Text</label><input type="text" id="f-offerText" /></div>
+          <div class="form-row"><label>Countdown Ends At</label><input type="datetime-local" id="f-countdownTarget" /></div>
+        </div>
+
+        <div class="admin-card">
+          <h3>About Page</h3>
+          <div class="form-row"><label>Company Description</label><textarea id="f-aboutDescription" rows="4"></textarea></div>
+          <div class="admin-grid-2">
+            <div class="form-row"><label>Facebook URL</label><input type="text" id="f-facebookUrl" /></div>
+            <div class="form-row"><label>Instagram URL</label><input type="text" id="f-instagramUrl" /></div>
+          </div>
+          <div class="form-row"><label>Phone Number</label><input type="text" id="f-phoneNumber" /></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+      </form>
+    </section>
+
+    <!-- APPEARANCE -->
+    <section class="admin-panel-section" id="panel-appearance">
+      <div class="admin-topbar"><h1>Appearance</h1></div>
+      <div id="appearance-alert"></div>
+      <form id="appearance-form">
+        <div class="admin-card">
+          <h3>Website Colors</h3>
+          <p class="card-sub">Changes apply across the whole site instantly.</p>
+          <div class="admin-grid-3">
+            <div class="form-row"><label>Primary (header/footer/text)</label><div class="color-input-row"><input type="color" id="c-primary" /><input type="text" id="c-primary-hex" /></div></div>
+            <div class="form-row"><label>Accent (buttons/prices)</label><div class="color-input-row"><input type="color" id="c-accent" /><input type="text" id="c-accent-hex" /></div></div>
+            <div class="form-row"><label>Secondary Accent</label><div class="color-input-row"><input type="color" id="c-accentSecondary" /><input type="text" id="c-accentSecondary-hex" /></div></div>
+            <div class="form-row"><label>Background</label><div class="color-input-row"><input type="color" id="c-background" /><input type="text" id="c-background-hex" /></div></div>
+            <div class="form-row"><label>Card Surface</label><div class="color-input-row"><input type="color" id="c-surface" /><input type="text" id="c-surface-hex" /></div></div>
+            <div class="form-row"><label>Body Text</label><div class="color-input-row"><input type="color" id="c-text" /><input type="text" id="c-text-hex" /></div></div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Colors</button>
+      </form>
+    </section>
+
+    <!-- ORDERS -->
+    <section class="admin-panel-section" id="panel-orders">
+      <div class="admin-topbar"><h1>Orders</h1></div>
+      <div class="admin-card">
+        <table class="admin-table">
+          <thead><tr><th>Order ID</th><th>Date</th><th>Customer</th><th>Phone</th><th>Items</th><th>Total</th></tr></thead>
+          <tbody id="orders-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- EMAIL CONFIG -->
+    <section class="admin-panel-section" id="panel-email">
+      <div class="admin-topbar"><h1>Order Email</h1></div>
+      <div id="email-alert"></div>
+      <div class="admin-card">
+        <h3>Send order notifications</h3>
+        <p class="card-sub">Every confirmed order is emailed to this address via the connected Gmail account. Use a Gmail <strong>App Password</strong>, not your normal password (Google Account → Security → App Passwords).</p>
+        <form id="email-form">
+          <div class="form-row"><label>Notification recipient (your Gmail)</label><input type="email" id="e-orderNotificationEmail" placeholder="you@gmail.com" /></div>
+          <div class="form-row"><label>Sender Gmail address</label><input type="email" id="e-gmailSenderAddress" placeholder="store.orders@gmail.com" /></div>
+          <div class="form-row"><label>Gmail App Password</label><input type="password" id="e-gmailAppPassword" placeholder="Leave blank to keep current value" /></div>
+          <button type="submit" class="btn btn-primary">Save Email Settings</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section class="admin-panel-section" id="panel-security">
+      <div class="admin-topbar"><h1>Security</h1></div>
+
+      <div class="admin-card">
+        <h3>Change Password</h3>
+        <div id="password-alert"></div>
+        <form id="password-form">
+          <div class="form-row"><label>Current Password</label><input type="password" id="p-current" required /></div>
+          <div class="form-row"><label>New Password</label><input type="password" id="p-new" minlength="8" required /></div>
+          <div class="form-row"><label>Confirm New Password</label><input type="password" id="p-confirm" minlength="8" required /></div>
+          <button type="submit" class="btn btn-primary">Update Password</button>
+        </form>
+      </div>
+
+      <div class="admin-card">
+        <h3>Admin URL</h3>
+        <p class="card-sub">This is the only link that opens this dashboard. It is not listed anywhere on the public site. Rotate it periodically.</p>
+        <div id="secretpath-alert"></div>
+        <form id="secretpath-form">
+          <div class="form-row"><label>New Secret Path</label><input type="text" id="s-newpath" placeholder="e.g. aurelia-hq-4491" /></div>
+          <div class="help-text">Letters, numbers, - _ . only, 6–64 characters. You will need to update your bookmark after saving.</div>
+          <button type="submit" class="btn btn-primary" style="margin-top:14px;">Update Admin URL</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-overlay" id="product-modal">
+  <div class="modal-box">
+    <h3 id="product-modal-title">Add Product</h3>
+    <div id="product-modal-alert"></div>
+    <form id="product-form">
+      <input type="hidden" id="pm-id" />
+      <img class="upload-preview" id="pm-preview" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80" alt="Preview" />
+      <div class="form-row">
+        <label>Product Image</label>
+        <input type="file" id="pm-image-file" accept="image/*" />
+        <div class="help-text">JPG, PNG, WEBP or GIF, up to 5MB.</div>
+      </div>
+      <div class="form-row"><label>Product Name</label><input type="text" id="pm-name" required /></div>
+      <div class="form-row"><label>Short Description</label><input type="text" id="pm-shortDescription" required /></div>
+      <div class="form-row"><label>Full Description</label><textarea id="pm-description" rows="3"></textarea></div>
+      <div class="admin-grid-3">
+        <div class="form-row"><label>Price (₹)</label><input type="number" id="pm-price" min="0" required /></div>
+        <div class="form-row"><label>Stock</label><input type="number" id="pm-stock" min="0" value="10" /></div>
+        <div class="form-row"><label>Category</label><input type="text" id="pm-category" value="General" /></div>
+      </div>
+      <div class="admin-grid-2">
+        <label style="display:flex; align-items:center; gap:8px; font-size:14px;"><input type="checkbox" id="pm-featured" /> Featured (best seller)</label>
+        <label style="display:flex; align-items:center; gap:8px; font-size:14px;"><input type="checkbox" id="pm-enabled" checked /> Enabled (visible to shoppers)</label>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" id="product-modal-cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Product</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/admin-assets/js/admin.js"></script>
+</body>
+</html>
